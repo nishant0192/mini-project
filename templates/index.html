@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fraud Detection</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection</h1>
+        <form action="/predict" method="post" id="prediction-form">
+            <input type="text" name="aluminium" placeholder="Aluminium" required><br>
+            <input type="text" name="ammonia" placeholder="Ammonia" required><br>
+            <input type="text" name="arsenic" placeholder="Arsenic" required><br>
+            <input type="text" name="barium" placeholder="Barium" required><br>
+            <input type="text" name="cadmium" placeholder="Cadmium" required><br>
+            <input type="text" name="chloramine" placeholder="Chloramine" required><br>
+            <input type="text" name="chromium" placeholder="Chromium" required><br>
+            <input type="text" name="copper" placeholder="Copper" required><br>
+            <input type="text" name="flouride" placeholder="Flouride" required><br>
+            <input type="text" name="bacteria" placeholder="Bacteria" required><br>
+            <input type="text" name="viruses" placeholder="Viruses" required><br>
+            <input type="text" name="lead" placeholder="Lead" required><br>
+            <input type="text" name="nitrates" placeholder="Nitrates" required><br>
+            <input type="text" name="nitrites" placeholder="Nitrites" required><br>
+            <input type="text" name="mercury" placeholder="Mercury" required><br>
+            <input type="text" name="perchlorate" placeholder="Perchlorate" required><br>
+            <input type="text" name="radium" placeholder="Radium" required><br>
+            <input type="text" name="selenium" placeholder="Selenium" required><br>
+            <input type="text" name="silver" placeholder="Silver" required><br>
+            <input type="text" name="uranium" placeholder="Uranium" required><br>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <p>{{ prediction_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
